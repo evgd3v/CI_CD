@@ -43,7 +43,7 @@ jobs:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          port: 22
+          port: 5843
           script: |
             docker pull ${{ secrets.DOCKERHUB_USERNAME }}/fastapi-app:latest
             docker stop fastapi-app || true
