@@ -1,0 +1,36 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+.env/
+.venv/
+
+# VS Code settings
+.vscode/
+
+# Pytest cache
+.pytest_cache/
+
+# MyPy
+.mypy_cache/
+
+# Logs
+*.log
+
+# Docker
+*.pid
+*.db
+*.sqlite3
+docker-compose.override.yml
+.env.docker
+
+# Ignore local settings
+.env.local
+*.secret
+secrets/
+
+# Ignore compiled shared objects
+*.so
