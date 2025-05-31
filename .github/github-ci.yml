@@ -43,9 +43,10 @@ jobs:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          port: 5843
+          port: 5843      # <- указать правильный порт SSH
           script: |
             docker pull ${{ secrets.DOCKERHUB_USERNAME }}/fastapi-app:latest
             docker stop fastapi-app || true
             docker rm fastapi-app || true
             docker run -d --name fastapi-app -p 8000:8000 ${{ secrets.DOCKERHUB_USERNAME }}/fastapi-app:latest
+
